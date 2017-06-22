@@ -1,0 +1,6 @@
+framework module WJClipsButton {
+  umbrella header "WJClipsButton-umbrella.h"
+
+  export *
+  module * { export * }
+}

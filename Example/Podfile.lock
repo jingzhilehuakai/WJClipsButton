@@ -1,0 +1,16 @@
+PODS:
+  - WJClipsButton (0.0.1)
+
+DEPENDENCIES:
+  - WJClipsButton (from `../`)
+
+EXTERNAL SOURCES:
+  WJClipsButton:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  WJClipsButton: a931505c2db8ec07ca66637d8b3b1841c59e6c54
+
+PODFILE CHECKSUM: df4cc8cef27dc753b3bd93191af0b7f637280485
+
+COCOAPODS: 1.2.1

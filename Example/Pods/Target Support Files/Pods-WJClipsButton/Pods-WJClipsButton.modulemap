@@ -1,0 +1,6 @@
+framework module Pods_WJClipsButton {
+  umbrella header "Pods-WJClipsButton-umbrella.h"
+
+  export *
+  module * { export * }
+}
