@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'WJClipsButton'
-  s.version          = '0.0.1'
+  s.version          = '1.0.0'
   s.summary          = 'Clips button, free your hand anytime.'
   s.description      = <<-DESC
 Clip to choose and pan to lock or unlock.

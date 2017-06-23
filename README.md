@@ -15,3 +15,28 @@
         <img src="https://img.shields.io/gitter/room/nwjs/nw.js.svg"/>
     </a>
 </p>
+
+## Requirements 
+
+- Swift 3.0
+- iOS 8.0
+- Xcode 8.0
+
+## Installation 
+
+WJClipsButton is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod "WJClipsButton"
+```
+
+## Usage 
+
+## Author
+
+jingzhilehuakai, wj_jingzhilehuakai@163.com
+
+## License 
+
+WJClipsButton is available under the MIT license. See the LICENSE file for more info.
