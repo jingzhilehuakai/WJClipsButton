@@ -150,6 +150,7 @@ public class WJClipsButton: UIButton {
             titleOfHighLightStatus = title!
             break
         }
+        configureButton()
     }
     
     // the titleFont of different status of button
@@ -165,21 +166,23 @@ public class WJClipsButton: UIButton {
             titleFontOfHightLightStatus = font
             break
         }
+        configureButton()
     }
     
     // the title color of different status of button
-    public func setButtonColor(_ color: UIColor, status: LockStatusOfButton) {
+    public func setButtonTitleColor(_ color: UIColor, status: LockStatusOfButton) {
         switch status {
         case .normal:
-            colorOfNormalStatus = color
+            titleColorOfNormalStatus = color
             break
         case .selected:
-            colorOfSelectedStatus = color
+            titleColorOfSelectedStatus = color
             break
         case .highlighted:
-            colorOfHighLightStatus = color
+            titleColorOfHighLightStatus = color
             break
         }
+        configureButton()
     }
     
     // the selectStaus of button
@@ -242,13 +245,13 @@ public class WJClipsButton: UIButton {
     fileprivate var titleFontOfHightLightStatus: UIFont = UIFont.systemFont(ofSize: 12)
     
     // the color of valid status
-    fileprivate var colorOfSelectedStatus: UIColor = UIColor.white
+    fileprivate var titleColorOfSelectedStatus: UIColor = UIColor.white
     
     // the color of inValid status
-    fileprivate var colorOfHighLightStatus: UIColor = UIColor.white
+    fileprivate var titleColorOfHighLightStatus: UIColor = UIColor.white
     
     // the color of normal status
-    fileprivate var colorOfNormalStatus: UIColor = UIColor.white
+    fileprivate var titleColorOfNormalStatus: UIColor = UIColor.white
 
     // MARK: - public initializers
     
@@ -283,7 +286,7 @@ public class WJClipsButton: UIButton {
         
         clipsToBounds = true
         setTitle(titleOfNormalStatus, for: .normal)
-        setTitleColor(colorOfNormalStatus, for: .normal)
+        setTitleColor(titleColorOfNormalStatus, for: .normal)
         titleLabel?.font = titleFontOfNormalStatus
         lockStatus = .normal
         
@@ -458,11 +461,11 @@ extension WJClipsButton: UIGestureRecognizerDelegate {
                 resetDisplay()
             } else {
                 setTitle(titleOfSelectedStatus, for: .normal)
-                setTitleColor(colorOfSelectedStatus, for: .normal)
+                setTitleColor(titleColorOfSelectedStatus, for: .normal)
                 titleLabel?.font = titleFontOfSelectedStatus
 
                 UIView.animate(withDuration: lockImageViewAnimationDucation, animations: {
-                    self.lockImageView?.frame.origin.x = self.frame.size.width - self.cornerRadius / 2 - (self.lockImageView?.frame.size.width)!
+                    self.lockImageView?.frame.origin.x = self.frame.size.width - self.frame.size.height
                 }, completion: nil)
             }
         }
@@ -496,11 +499,11 @@ extension WJClipsButton {
         lockImageView?.image = unlockImage
         if lockStatus == .normal && hightLightStatus == true {
             setTitle(titleOfHighLightStatus, for: .normal)
-            setTitleColor(colorOfHighLightStatus, for: .normal)
+            setTitleColor(titleColorOfHighLightStatus, for: .normal)
             titleLabel?.font = titleFontOfHightLightStatus
         } else {
             setTitle(titleOfNormalStatus, for: .normal)
-            setTitleColor(colorOfNormalStatus, for: .normal)
+            setTitleColor(titleColorOfNormalStatus, for: .normal)
             titleLabel?.font = titleFontOfNormalStatus
         }
     }
